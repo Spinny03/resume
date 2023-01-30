@@ -1,0 +1,225 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome}
+\usepackage[most]{tcolorbox}
+
+
+\geometry{left=1cm, top=1cm, right=1cm, bottom=1cm}
+
+
+\titleformat{\section}{
+  \vspace{-2pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
+
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \hspace{-3mm}{#1}:\hspace{1mm} & \hspace*{0pt}\hfill{\footnotesize{ #3}} \vspace{-0.5mm}\\ \hspace{-1.9mm}#2 
+    \end{tabular*}
+    \vspace{0mm}
+}
+
+\newcommand{\resumeExp}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1.2mm} \\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4} \\  
+    \end{tabular*}
+    \vspace{-6.1mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.4mm} \small\textbf{#1} & {\footnotesize{#3}}\vspace{-1mm} \\
+        \hspace{-4.3mm} \footnotesize{\text{#2}} & \footnotesize{#4} \\
+        
+    \end{tabular*}
+    \vspace{-6.5mm}
+}
+
+\newcommand{\resumeEdu}[4]{
+\vspace{0mm}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{-4.3mm} \small\textbf{#1} & \footnotesize{#3}\vspace{-1mm} \\
+        \hspace{-4.3mm} \footnotesize{#2} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-3.2mm}
+}
+
+\newcommand{\resumeAchieve}[3]
+{
+\hspace{-3.1mm}\textbf{ #1} & {#2} & \hspace{3mm}\footnotesize{#3}
+\vspace{0mm}\\
+}
+
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm,itemsep=-2.5mm]}
+
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-1.5mm}}
+
+\renewcommand{\arraystretch}{1}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  
+
+\newcommand{\name}{Filippo Spinella} % Your Name
+\newcommand{\course}{B.Tech -Computer Science and Engineering} % Your Course
+\newcommand{\roll}{xxxxxxxx} % Your Roll No.
+\newcommand{\phone}{351 980 5291} % Your Phone Number
+\newcommand{\emaila}{fili.spin2003@gmail.com} %Email 1
+\newcommand{\github}{Spinny03} %Github
+\newcommand{\website}{https://example.com} %Website
+\newcommand{\linkedin}{filippo-spinella} %linkedin
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+
+%----------HEADING-----------------
+\begin{center}
+    \LARGE{\textbf{\name}}
+\end{center}
+\vspace{-6.5mm}
+\begin{center}
+     \small{\href{https://github.com/\github}{\faGithub \hspace{0.2mm} Spinny03} |  
+     \small{\href{https://github.com/spinnyIkinova}{\faGithub \hspace{0.2mm} SpinnyIkinova} | \href{https://www.linkedin.com/in/\linkedin/}{\faLinkedinSquare \hspace{0.2mm} filippo-spinella} | \href{mailto:\emaila}{\faSend \hspace{0.2mm} \emaila} | \faPhone \hspace{0.2mm} +39 \phone }
+\end{center}
+\vspace{-2.5mm}
+
+%-----------EDUCATION-----------------
+
+\vspace{-2.5mm}
+\section{Education}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{University of Genoa} 
+{Bachelors of Technology in Computer Science} 
+{Sep. 2022 - Present} %Event Dates
+{GPA: 4.0/4.0} %Website
+\resumeSubHeadingListEnd
+\vspace{-2.5mm}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{ITIS Italo Calvino} 
+{High School Diploma in Computer Science} 
+{Sep. 2017 – Jun. 2022} %Event Dates
+{GPA: 3.9/4.0} %Website
+\resumeSubHeadingListEnd
+\vspace{-2.5mm}
+
+\resumeSubHeadingListStart
+\resumeEdu
+{LUISS - OII} 
+{OII preparation course} 
+{Apr. 2021 – May. 2021} %Event Dates
+{} %Website
+\resumeSubHeadingListEnd
+\vspace{-2.5mm}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeExp
+{Ikinova}
+{Full Stack developer, Part-Time}
+{Lug 2022 - Present}
+{Acqui Terme (Remote), Italy}
+\resumeItemListStart
+\item[$\bullet$] Restructured backend from php to typescript and clustered with pm2
+\item[$\bullet$] Built a CI/CD environment from scratch with mochajs and GitHub actions
+\item[$\bullet$] Created a daemon that auto-synchronises patient data from an API of the Piemonte region
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProject
+{Visit Berlin}
+{IIT Calvino} %Project Name, Location Name
+{Apr 2020 - May 2020} %Event Dates
+{\href{https://github.com/Spinny03/VisitBerlin}{GitHub}} 
+\resumeItemListStart
+\item[$\bullet$] Created a web app, for a hypothetical tourism agency
+\item[$\bullet$] used for building: git, mysql, php, javascript, jquery, Leaflet, html and css
+\resumeItemListEnd
+
+\resumeProject
+{Il Pescaggio}
+{IIT Calvino} %Project Name, Location Name
+{Jan 2022 - Feb 2022} %Event Dates
+{\href{https://github.com/Spinny03/Il_Pescaggio/}{GitHub}} 
+\resumeItemListStart
+\item[$\bullet$] Create a web app for a possible restaurant
+\item[$\bullet$] used for building: git, mysql, php, javascript, html and css
+\resumeItemListEnd
+
+\resumeProject
+{Pac-Man}
+{IIT Calvino} %Project Name, Location Name
+{Nov 2021 - Nov 2021} %Event Dates
+{\href{https://github.com/Spinny03/PacMan_SchoolProject}{GitHub}} 
+\resumeItemListStart
+\item[$\bullet$] Made an identical copy of the Pac-Man video game
+\item[$\bullet$] used for building: java
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\vspace{-5.5mm}
+
+%-----------ACHIEVEMENTS-----------------
+
+\section{Achievements}
+\vspace{0.2mm}
+\small{\begin{tabular*}{\textwidth}[t]{p{0.22\textwidth} p{0.68\textwidth}@{\extracolsep{\fill}}r}
+
+
+\resumeAchieve{Student - IANUA}{IANUA offers a special study plan to the most brilliant students at the University of Genoa (top 10th percentile).}{2022} \\
+\resumeAchieve{Mentee - LeadTheFuture}{Among the few Italian students selected to be mentees for LeadTheFuture, a leading mentorship non-profit organization for students in STEM, with acceptance rate below 20\%.}{2022} \\
+\resumeAchieve{Finalist - Kangourou}{Kangourou is a nationwide math and programming competition for the best students in Italy}{2022}
+
+\end{tabular*}}
+
+\vspace{-2.5mm}
+
+%-------------------------------------------
+\end{document}
+
