@@ -13,6 +13,7 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Filippo Spinella - Resume}, pdfauthor={Filippo Spinella}}
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{graphicx}
@@ -123,111 +124,98 @@
 \resumeSubHeadingListStart
 
 \resumeExp
-{\href{https://www.wikicasa.it/}{Wikicasa.it}}
-{Back-end developer, Part-Time}
-{2023 - Present}
-{Genoa (Hybrid), Italy}
+{\href{https://www.trellistech.com/}{Trellis} \textmd{\footnotesize(Y Combinator, Spring 2026)}}
+{Founding Lead Engineer}
+{Feb 2026 -- Present}
+{San Francisco, CA (Remote)}
 \resumeItemListStart
-\item[$\bullet$] Improved the speed of reading agency data from MySQL to ElasticSearch by -83\%
-\item[$\bullet$] Implemented a new microservice for managing geospatial polygons, going from $\sim$160ms to $\sim$13ms
-\item[$\bullet$] Migrated queries from MongoDB to ElasticSearch
-\item[$\bullet$] Pioneered the company's first Kubernetes cluster on bare-metal servers, managing the entire CI/CD pipeline with Bitbucket and ArgoCD.
-\item[$\bullet$] Created a microservice in Go and gRPC for converting images into different formats and sizes, handling over 25TB of data and 270 million images. Optimized storage on GCS Bucket, with a 40\% cost reduction.
-\item[$\bullet$] Resolved major cache inefficiencies that slowed down application startup. Implemented a cache serialization system, reducing startup time by 45 seconds.
-\item[$\bullet$] Developed a RAG (Retrieval-Augmented Generation) system integrated with Wikicasa for the "TroverAI" feature: enables natural-language property search using Python, LangChain and the OpenAI APIs.
+\item[] \textit{AI agents that run guest messaging and daily operations for vacation-rental managers.}
+\item[$\bullet$] \textbf{Built the product from day one} with the founding team, from first commit to 45+ property-management customers, 4,000+ listings and \$600K+ ARR in 9 months.
+\item[$\bullet$] \textbf{Set up the codebase the whole team builds on}: one Turborepo monorepo for the web app, API and mobile app, with the shared Postgres schema, database migrations and CI/CD to Vercel and Fly.io.
+\item[$\bullet$] \textbf{Shipped the direct Airbnb integration} on Airbnb's official API (listings, pricing, calendar, messaging, bookings, payouts, claims), so operators can run Airbnb from Trellis without a property-management system (PMS).
+\item[$\bullet$] \textbf{Fixed a peak-traffic production slowdown}: cut API p95 latency by 74\% (5.5\,s $\rightarrow$ 1.4\,s) and auth-server calls by 98\% by verifying sessions locally, moving the API, jobs and Redis next to the database, and fixing slow queries and deadlocks.
+\item[$\bullet$] \textbf{Cut $\sim$\$13K/month in AI and cloud spend} by moving high-volume LLM classification to cheaper models, lowering reasoning effort and removing duplicate calls; built per-feature AI cost tracking and a cross-vendor cost dashboard.
+\item[$\bullet$] \textbf{Led development of the AI Inbox}, the core product where AI agents and staff answer guests on every channel, adding LINE, Instagram, Messenger, WhatsApp groups, Booking.com and Vrbo chats, and WhatsApp Business calling.
+\item[$\bullet$] \textbf{Integrated the systems operators run on}: PMS and channel managers (Guesty, Hostaway, Cloudbeds, Channex, Kross), smart locks and sensors (Seam, RemoteLock, Minut) and Stripe payments in the Guest Portal.
+\item[$\bullet$] \textbf{Developed the workflow engine's core actions}, turning operators' written procedures into AI-run automations (escalations, visits, shifts, reports) with Slack, Attio, monday.com, Breezeway and PriceLabs.
+\item[$\bullet$] \textbf{Worked directly with 20+ customers} on Slack and WhatsApp, turning their reports into fixes and features.
+\resumeItemListEnd
+
+\resumeExp
+{\href{https://www.wikicasa.it/}{Wikicasa.it}}
+{Backend Developer, Part-Time}
+{2023 -- 2026}
+{Genoa, Italy (Hybrid)}
+\resumeItemListStart
+\item[$\bullet$] Built a Go/gRPC image-processing service for 270M images (25\,TB), cutting cloud storage costs by 40\%.
+\item[$\bullet$] Built ``TroverAI'', a RAG-based natural-language property search, with Python, LangChain and the OpenAI API.
+\item[$\bullet$] Set up the company's first Kubernetes cluster on bare-metal servers, with CI/CD on Bitbucket and ArgoCD.
+\item[$\bullet$] Sped up geospatial polygon lookups 12$\times$ ($\sim$160\,ms $\rightarrow$ $\sim$13\,ms) with a dedicated microservice.
+\item[$\bullet$] Cut the time to load agency data from MySQL into Elasticsearch by 83\%; migrated MongoDB queries to Elasticsearch.
+\item[$\bullet$] Reduced application startup time by 45\,s by fixing cache inefficiencies with a cache-serialization layer.
 \resumeItemListEnd
 
 \resumeExp
 {Ikinova}
-{Full Stack developer, Part-Time}
-{2022 - 2023}
-{Acqui Terme (Remote), Italy}
+{Full-Stack Developer, Part-Time}
+{2022 -- 2023}
+{Acqui Terme, Italy (Remote)}
 \resumeItemListStart
-\item[$\bullet$] Restructured the backend from PHP to TypeScript (NodeJS), clustering it with PM2 for improved performance and scalability.
-\item[$\bullet$] Built a CI/CD environment from scratch using Mocha.js and GitHub Actions.
-\item[$\bullet$] Created a daemon that auto-synchronises patient data from an API of the Piemonte region
-\item[$\bullet$] Collaborated on developing front-end components using Ionic and Angular.
+\item[$\bullet$] Migrated the backend from PHP to TypeScript/Node.js; built CI/CD from scratch (Mocha, GitHub Actions).
+\item[$\bullet$] Wrote a daemon that syncs patient data from the Piedmont Region's API; built Ionic/Angular UI components.
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-5.5mm}
 
+%-----------SKILLS-----------------
+\section{Skills}
+\vspace{-1mm}
+{\small
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Languages} & TypeScript, Python, Go, SQL \\
+\textbf{Backend \& data} & Node.js, Next.js, PostgreSQL/Supabase, Prisma, Redis, Elasticsearch, MongoDB, MySQL, gRPC \\
+\textbf{AI} & OpenAI/Gemini APIs, Vercel AI SDK, OpenAI Agents SDK, RAG, LangChain, Claude Code, Codex \\
+\textbf{Cloud \& DevOps} & Vercel, Fly.io, Google Cloud, Kubernetes, ArgoCD, Docker, GitHub Actions, Sentry, PostHog \\
+\textbf{Frontend \& mobile} & React, React Native (Expo), Angular, Ionic \\
+\textbf{Integrations} & Airbnb API, WhatsApp Business and Meta APIs, Twilio, Stripe, Seam \\
+\end{tabularx}}
+\vspace{-3mm}
+
 %-----------EDUCATION-----------------
-
-\vspace{-2.5mm}
 \section{Education}
-
 \resumeSubHeadingListStart
 \resumeEdu
-{University of Genoa} 
-{Masters of Science in Computer Science}
-{2025 - 2027} %Event Dates
-{}
-\resumeSubHeadingListEnd
-\vspace{-2.5mm}
-
-\resumeSubHeadingListStart
-\resumeEdu
-{University of Genoa} 
-{Bachelors of Science in Computer Science} 
-{2022 - 2025} %Event Dates
-{}
-\resumeSubHeadingListEnd
-\vspace{-2.5mm}
-
-\resumeSubHeadingListStart
-\resumeEdu
-{CyberChallenge} 
-{National project for CyberSecurity training} 
-{2023 – 2023} %Event Dates
-{} %Website
+{University of Genoa}
+{B.Sc. in Computer Science, IANUA honors program (top 10\% of students)}
+{2022 -- 2025}
+{Genoa, Italy}
 \resumeSubHeadingListEnd
 \vspace{-2.5mm}
 
 %-----------PROJECTS-----------------
 \section{Projects}
 \resumeSubHeadingListStart
-
 \resumeProject
 {University ChatBot}
-{Google x IANUA} %Project Name, Location Name
-{2024} %Event Dates
-{} 
+{Google $\times$ IANUA}
+{2024}
+{}
 \resumeItemListStart
-\item[$\bullet$] 
-As part of a 4-person team, developed a chatbot using Next.js and Python to assist university students. The chatbot leverages Gemini for Retrieval-Augmented Generation (RAG) from the university's website.
+\item[$\bullet$] Built a Gemini RAG chatbot answering student questions from university web pages (team of 4; Next.js, Python).
 \resumeItemListEnd
-
-\resumeProject
-{Management Orders}
-{PLC company} %Project Name, Location Name
-{2023} %Event Dates
-{} 
-\resumeItemListStart
-\item[$\bullet$] 
-Led the development of an order management application for a PLC company, serving as both Project Manager and Back-end Developer.
-\resumeItemListEnd
-
 \resumeSubHeadingListEnd
-
 \vspace{-5.5mm}
 
-%-----------ACHIEVEMENTS-----------------
-
-\section{Achievements}
-\vspace{0.2mm}
-\small{\begin{tabular*}{\textwidth}[t]{p{0.22\textwidth} p{0.68\textwidth}@{\extracolsep{\fill}}r}
-
-
-\resumeAchieve{Participant - \href{https://www.samsung.com/it/campaign/innovation-campus/}{Samsung IC}}{The Samsung Innovation Campus is a specialization course in the IOT and innovation field.}{2023} \\
-\resumeAchieve{Student - \href{https://ianua.unige.it/}{IANUA}}{IANUA offers a special study plan to the most brilliant students at the University of Genoa (top 10th percentile).}{2022} \\
-\resumeAchieve{Mentee - LeadTheFuture}{Among the few Italian students selected to be mentees for LeadTheFuture, a leading mentorship non-profit organization for students in STEM, with acceptance rate below 20\%.}{2022} \\
-\resumeAchieve{Finalist - Kangourou}{Kangourou is a nationwide math and programming competition for the best students in Italy}{2022}
-
+%-----------AWARDS-----------------
+\section{Awards \& Programs}
+\vspace{-1mm}
+{\small
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+\textbf{Samsung Innovation Campus}: IoT and innovation specialization course & 2023 \\
+\textbf{Kangourou}: national finalist in Italy's math and programming competition & 2022 \\
+\textbf{LeadTheFuture}: selected mentee of the STEM mentorship non-profit ($<$20\% acceptance rate) & 2022 \\
 \end{tabular*}}
-
-\vspace{-2.5mm}
 
 %-------------------------------------------
 \end{document}
-
